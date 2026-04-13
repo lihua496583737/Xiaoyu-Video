@@ -39,7 +39,7 @@ services:
       dockerfile: Dockerfile
       args:
         USE_CN_MIRROR: ${USE_CN_MIRROR:-false}
-    container_name: pixelle-video-api
+    container_name: XiaoYu.AI-api
     command: .venv/bin/python api/app.py --host 0.0.0.0 --port 8000
     depends_on:
       init:
@@ -80,7 +80,7 @@ services:
       dockerfile: Dockerfile
       args:
         USE_CN_MIRROR: ${USE_CN_MIRROR:-false}
-    container_name: pixelle-video-web
+    container_name: XiaoYu.AI-web
     command: .venv/bin/streamlit run web/app.py --server.port 8501 --server.address 0.0.0.0
     depends_on:
       init:

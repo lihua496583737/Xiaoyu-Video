@@ -1,9 +1,9 @@
 [project]
-name = "pixelle-video"
+name = "XiaoYu.AI"
 version = "0.1.15"
 description = "AI-powered video creation platform - Part of Pixelle ecosystem"
 authors = [
-    {name = "Pixelle.AI"}
+    {name = "XiaoYu.AI"}
 ]
 readme = "README.md"
 requires-python = ">=3.11"
@@ -37,7 +37,7 @@ dev = [
 ]
 
 [project.scripts]
-pixelle-video = "pixelle_video.cli:main"
+XiaoYu.AI = "pixelle_video.cli:main"
 pvideo = "pixelle_video.cli:main"
 
 [build-system]

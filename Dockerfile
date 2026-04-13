@@ -1,4 +1,4 @@
-# Pixelle-Video Docker Image
+# XiaoYu.AI Docker Image
 # Based on Python 3.11 slim for smaller image size
 
 FROM python:3.11-slim

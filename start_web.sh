@@ -1,7 +1,7 @@
 #!/bin/bash
-# Start Pixelle-Video Web UI
+# Start XiaoYu.AI Web UI
 
-echo "🚀 Starting Pixelle-Video Web UI..."
+echo "🚀 Starting XiaoYu.AI Web UI..."
 echo ""
 
 # Start Streamlit

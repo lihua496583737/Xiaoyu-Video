@@ -1,12 +1,12 @@
 # 架构设计
 
-Pixelle-Video 的技术架构概览。
+XiaoYu.AI 的技术架构概览。
 
 ---
 
 ## 核心架构
 
-Pixelle-Video 采用分层架构设计：
+XiaoYu.AI 采用分层架构设计：
 
 - **Web 层**: Streamlit Web 界面
 - **服务层**: 核心业务逻辑

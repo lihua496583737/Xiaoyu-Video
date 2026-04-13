@@ -1901,7 +1901,7 @@ wheels = [
 ]
 
 [[package]]
-name = "pixelle-video"
+name = "XiaoYu.AI"
 version = "0.1.15"
 source = { editable = "." }
 dependencies = [

@@ -268,11 +268,11 @@ def render_version_info():
     with st.container(border=True):
         st.markdown(f"**{tr('version.title')}**")
         version = get_project_version()
-        github_url = "https://github.com/AIDC-AI/Pixelle-Video"
+        github_url = "https://github.com/AIDC-AI/XiaoYu.AI"
         
         # Version and GitHub link in one line
-        github_url = "https://github.com/AIDC-AI/Pixelle-Video"
-        badge_url = "https://img.shields.io/github/stars/AIDC-AI/Pixelle-Video"
+        github_url = "https://github.com/AIDC-AI/XiaoYu.AI"
+        badge_url = "https://img.shields.io/github/stars/AIDC-AI/XiaoYu.AI"
 
         st.markdown(
             f'{tr("version.current")}: `{version}` &nbsp;&nbsp; '

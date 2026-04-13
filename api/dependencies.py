@@ -23,13 +23,13 @@ from loguru import logger
 from pixelle_video.service import PixelleVideoCore
 
 
-# Global Pixelle-Video instance
+# Global XiaoYu.AI instance
 _pixelle_video_instance: PixelleVideoCore = None
 
 
 async def get_pixelle_video() -> PixelleVideoCore:
     """
-    Get Pixelle-Video core instance (dependency injection)
+    Get XiaoYu.AI core instance (dependency injection)
     
     Returns:
         PixelleVideoCore instance
@@ -39,16 +39,16 @@ async def get_pixelle_video() -> PixelleVideoCore:
     if _pixelle_video_instance is None:
         _pixelle_video_instance = PixelleVideoCore()
         await _pixelle_video_instance.initialize()
-        logger.info("✅ Pixelle-Video initialized for API")
+        logger.info("✅ XiaoYu.AI initialized for API")
     
     return _pixelle_video_instance
 
 
 async def shutdown_pixelle_video():
-    """Shutdown Pixelle-Video instance and cleanup resources"""
+    """Shutdown XiaoYu.AI instance and cleanup resources"""
     global _pixelle_video_instance
     if _pixelle_video_instance:
-        logger.info("Shutting down Pixelle-Video...")
+        logger.info("Shutting down XiaoYu.AI...")
         await _pixelle_video_instance.cleanup()
         _pixelle_video_instance = None
 

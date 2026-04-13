@@ -1,0 +1,8 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with color grading workflow ID",
+  "metadata": {
+    "type": "color_grading",
+    "description": "Color grading workflow for cinematic look"
+  }
+}

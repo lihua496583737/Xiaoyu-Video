@@ -1,12 +1,12 @@
 # Architecture
 
-Technical architecture overview of Pixelle-Video.
+Technical architecture overview of XiaoYu.AI.
 
 ---
 
 ## Core Architecture
 
-Pixelle-Video uses a layered architecture design:
+XiaoYu.AI uses a layered architecture design:
 
 - **Web Layer**: Streamlit Web interface
 - **Service Layer**: Core business logic

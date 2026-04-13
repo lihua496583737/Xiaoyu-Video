@@ -1,0 +1,13 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with Wan2.2 anime workflow ID",
+  "metadata": {
+    "model": "wan2.2",
+    "type": "animation",
+    "style": "cinematic",
+    "supports_ipadapter": true,
+    "max_duration_seconds": 5,
+    "default_resolution": "720p",
+    "description": "Wan2.2 cinematic anime video generation workflow"
+  }
+}

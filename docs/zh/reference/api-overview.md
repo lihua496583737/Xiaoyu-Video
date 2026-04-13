@@ -1,6 +1,6 @@
 # API 概览
 
-Pixelle-Video 提供 Python SDK 和 HTTP REST API 两种方式。
+XiaoYu.AI 提供 Python SDK 和 HTTP REST API 两种方式。
 
 ---
 

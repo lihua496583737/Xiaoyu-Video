@@ -1,6 +1,6 @@
 # Web UI Guide
 
-Detailed introduction to the Pixelle-Video Web interface features.
+Detailed introduction to the XiaoYu.AI Web interface features.
 
 ---
 

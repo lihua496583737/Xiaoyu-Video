@@ -1,6 +1,6 @@
 # API Overview
 
-Pixelle-Video provides both Python SDK and HTTP REST API.
+XiaoYu.AI provides both Python SDK and HTTP REST API.
 
 ---
 

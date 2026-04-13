@@ -1,6 +1,6 @@
 # API 使用
 
-Pixelle-Video 提供完整的 Python API，方便集成到你的项目中。
+XiaoYu.AI 提供完整的 Python API，方便集成到你的项目中。
 
 ---
 

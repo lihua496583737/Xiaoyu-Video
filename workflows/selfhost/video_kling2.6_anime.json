@@ -1,0 +1,12 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with Kling 2.6 workflow ID",
+  "metadata": {
+    "model": "kling2.6",
+    "type": "animation",
+    "supports_lip_sync": true,
+    "max_duration_seconds": 10,
+    "default_resolution": "1080p",
+    "description": "Kling 2.6 high-quality animation video workflow with lip-sync support"
+  }
+}

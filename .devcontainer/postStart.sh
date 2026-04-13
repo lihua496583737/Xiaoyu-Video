@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "[devcontainer] postStart: launching Pixelle-Video Web UI in background..."
-cd /workspaces/Pixelle-Video
+echo "[devcontainer] postStart: launching XiaoYu.AI Web UI in background..."
+cd /workspaces/XiaoYu.AI
 
 # Set Streamlit config for headless mode and proper port binding
 export STREAMLIT_SERVER_PORT=8501
@@ -20,7 +20,7 @@ echo "[devcontainer] Streamlit started with PID $WEB_PID (logs: /tmp/pixelle_str
 sleep 3
 if ps -p $WEB_PID > /dev/null 2>&1; then
     echo ""
-    echo "✅ Pixelle-Video Web UI is launching on port 8501"
+    echo "✅ XiaoYu.AI Web UI is launching on port 8501"
     echo "🌐 The URL will be available shortly (usually within 5-10 seconds)"
     echo ""
 else

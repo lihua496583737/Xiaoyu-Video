@@ -11,7 +11,7 @@
 # limitations under the License.
 
 """
-Pixelle-Video Utilities
+XiaoYu.AI Utilities
 
 Utility functions and helpers.
 """

@@ -1,6 +1,6 @@
 # API Usage
 
-Pixelle-Video provides a complete Python API for easy integration into your projects.
+XiaoYu.AI provides a complete Python API for easy integration into your projects.
 
 ---
 

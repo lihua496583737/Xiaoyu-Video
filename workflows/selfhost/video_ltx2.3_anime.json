@@ -1,0 +1,15 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with LTX 2.3 anime workflow ID from RunningHub",
+  "metadata": {
+    "model": "ltx2.3",
+    "type": "animation",
+    "style": "anime",
+    "supports_ipadapter": true,
+    "supports_controlnet": true,
+    "max_duration_seconds": 10,
+    "default_resolution": "720x1280",
+    "default_fps": 24,
+    "description": "LTX 2.3 high-quality anime video generation workflow"
+  }
+}

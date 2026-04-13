@@ -11,7 +11,7 @@
 # limitations under the License.
 
 """
-Pixelle-Video Core - Service Layer
+XiaoYu.AI Core - Service Layer
 
 Provides unified access to all capabilities (LLM, TTS, Image, etc.)
 """
@@ -28,6 +28,7 @@ from pixelle_video.services.llm_service import LLMService
 from pixelle_video.services.tts_service import TTSService
 from pixelle_video.services.media import MediaService
 from pixelle_video.services.image_analysis import ImageAnalysisService
+from pixelle_video.pipelines.animation import AnimationPipeline
 from pixelle_video.services.video_analysis import VideoAnalysisService
 from pixelle_video.services.video import VideoService
 from pixelle_video.services.frame_processor import FrameProcessor
@@ -40,7 +41,7 @@ from pixelle_video.pipelines.asset_based import AssetBasedPipeline
 
 class PixelleVideoCore:
     """
-    Pixelle-Video Core - Service Layer
+    XiaoYu.AI Core - Service Layer
     
     Provides unified access to all capabilities.
     
@@ -73,7 +74,7 @@ class PixelleVideoCore:
     
     def __init__(self, config_path: str = "config.yaml"):
         """
-        Initialize Pixelle-Video Core
+        Initialize XiaoYu.AI Core
         
         Args:
             config_path: Path to configuration file
@@ -187,10 +188,10 @@ class PixelleVideoCore:
             await pixelle_video.initialize()
         """
         if self._initialized:
-            logger.warning("Pixelle-Video already initialized")
+            logger.warning("XiaoYu.AI already initialized")
             return
         
-        logger.info("🚀 Initializing Pixelle-Video...")
+        logger.info("🚀 Initializing XiaoYu.AI...")
         
         # 1. Initialize core services (ComfyKit will be lazy-loaded later)
         # Initialize services
@@ -210,6 +211,7 @@ class PixelleVideoCore:
             "standard": StandardPipeline(self),
             "custom": CustomPipeline(self),
             "asset_based": AssetBasedPipeline(self),
+            "animation": AnimationPipeline(self),
         }
         logger.info(f"📹 Registered pipelines: {', '.join(self.pipelines.keys())}")
         
@@ -217,7 +219,7 @@ class PixelleVideoCore:
         self.generate_video = self._create_generate_video_wrapper()
         
         self._initialized = True
-        logger.info("✅ Pixelle-Video initialized successfully\n")
+        logger.info("✅ XiaoYu.AI initialized successfully\n")
     
     async def cleanup(self):
         """
@@ -297,7 +299,7 @@ class PixelleVideoCore:
     @property
     def project_name(self) -> str:
         """Get project name from config"""
-        return self.config.get("project_name", "Pixelle-Video")
+        return self.config.get("project_name", "XiaoYu.AI")
     
     def __repr__(self) -> str:
         """String representation"""

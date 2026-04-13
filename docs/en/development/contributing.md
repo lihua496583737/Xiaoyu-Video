@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to Pixelle-Video!
+Thank you for your interest in contributing to XiaoYu.AI!
 
 ---
 
@@ -18,8 +18,8 @@ Thank you for your interest in contributing to Pixelle-Video!
 
 ```bash
 # Clone your fork
-git clone https://github.com/your-username/Pixelle-Video.git
-cd Pixelle-Video
+git clone https://github.com/your-username/XiaoYu.AI.git
+cd XiaoYu.AI
 
 # Install development dependencies
 uv sync
@@ -40,7 +40,7 @@ pytest
 
 ## Submit Issues
 
-Having problems or feature suggestions? Please submit at [GitHub Issues](https://github.com/AIDC-AI/Pixelle-Video/issues).
+Having problems or feature suggestions? Please submit at [GitHub Issues](https://github.com/AIDC-AI/XiaoYu.AI/issues).
 
 ---
 

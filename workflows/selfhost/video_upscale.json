@@ -1,0 +1,10 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with video upscaling workflow ID",
+  "metadata": {
+    "type": "upscaling",
+    "model": "realesrgan",
+    "target_resolution": "1080x1920",
+    "description": "Video upscaling workflow (720p -> 1080p)"
+  }
+}

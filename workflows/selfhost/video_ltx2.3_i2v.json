@@ -1,0 +1,9 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with LTX 2.3 I2V workflow ID",
+  "metadata": {
+    "model": "ltx2.3",
+    "type": "image_to_video",
+    "description": "LTX 2.3 image-to-video conversion workflow"
+  }
+}

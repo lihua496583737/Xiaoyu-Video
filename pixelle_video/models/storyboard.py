@@ -22,36 +22,49 @@ from typing import List, Optional, Dict, Any
 @dataclass
 class StoryboardConfig:
     """Storyboard configuration parameters"""
-    
+
     # Required parameters (must come first in dataclass)
     media_width: int                           # Media width (image or video, required)
     media_height: int                          # Media height (image or video, required)
-    
+
     # Task isolation
     task_id: Optional[str] = None              # Task ID for file isolation (auto-generated if None)
-    
-    n_storyboard: int = 5                      # Number of storyboard frames
+
+    n_storyboard: int = 5                      # Number of storyboard frames (or scenes for animation)
     min_narration_words: int = 5               # Min narration word count
     max_narration_words: int = 20              # Max narration word count
-    min_image_prompt_words: int = 30           # Min image prompt word count
-    max_image_prompt_words: int = 60           # Max image prompt word count
-    
+    min_image_prompt_words: int = 30           # Min media prompt word count
+    max_image_prompt_words: int = 60           # Max media prompt word count
+
     # Video parameters (fps only, size is determined by frame template)
     video_fps: int = 30                        # Frame rate
-    
+
     # Audio parameters
     tts_inference_mode: str = "local"          # TTS inference mode: "local" or "comfyui"
     voice_id: Optional[str] = None             # Voice ID (for local: Edge TTS voice ID; for comfyui: workflow-specific)
     tts_workflow: Optional[str] = None         # TTS workflow filename (for ComfyUI mode, None = use default)
     tts_speed: Optional[float] = None          # TTS speed multiplier (0.5-2.0, 1.0 = normal)
     ref_audio: Optional[str] = None            # Reference audio for voice cloning (ComfyUI mode only)
-    
+
     # Media workflow
     media_workflow: Optional[str] = None       # Media workflow filename (image or video, None = use default)
-    
+
     # Frame template (includes size information in path)
     frame_template: str = "1080x1920/default.html"  # Template path with size (e.g., "1080x1920/default.html")
     template_params: Optional[Dict[str, Any]] = None  # Custom template parameters (e.g., {"accent_color": "#ff0000"})
+    
+    # === Animation video extension fields (optional) ===
+    animation_style: Optional[str] = None      # Animation style (e.g., "fanren_xianxia", "demon_slayer")
+    video_model: Optional[str] = None          # Video generation model (ltx2.3/wan2.2/kling2.6)
+    max_retries: int = 3                       # Max retry attempts per scene
+    fail_fast: bool = False                    # Fail immediately on scene failure
+    enable_upscale: bool = True                # Enable video upscaling
+    enable_interpolation: bool = True          # Enable frame interpolation
+    enable_color_grading: bool = True          # Enable color grading
+    enable_lip_sync: bool = True               # Enable lip sync
+    bgm_path: Optional[str] = None             # BGM path
+    bgm_volume: float = 0.3                    # BGM volume
+    prompt_prefix: Optional[str] = None        # Style prompt prefix
 
 
 @dataclass
@@ -60,19 +73,27 @@ class StoryboardFrame:
     index: int                                 # Frame index (0-based)
     narration: str                             # Narration text
     image_prompt: str                          # Image generation prompt (can be None for text-only or video)
-    
+
     # Generated resource paths
     audio_path: Optional[str] = None           # Audio file path (narration)
-    media_type: Optional[str] = None           # Media type: "image" or "video" (None if no media)
+    media_type: Optional[str] = None           # Media type: "image" or "video" or "animation" (None if no media)
     image_path: Optional[str] = None           # Original image path (for image type)
     video_path: Optional[str] = None           # Original video path (for video type, before composition)
     composed_image_path: Optional[str] = None  # Composed image path (with subtitles, for image type)
     video_segment_path: Optional[str] = None   # Final video segment path
-    
+
+    # Animation video extension fields (optional)
+    scene_config: Optional[Dict[str, Any]] = None  # Scene configuration for animation mode
+    quality_score: Optional[float] = None          # Quality score (0-1) for animation scenes
+    retry_count: int = 0                            # Number of retries for this frame
+    status: str = "pending"                         # pending/generating/completed/failed
+    error: Optional[str] = None                     # Error message if failed
+    lip_sync_path: Optional[str] = None             # Lip-synced video path (if enabled)
+
     # Metadata
     duration: float = 0.0                      # Frame duration (seconds, from audio or video)
     created_at: Optional[datetime] = None
-    
+
     def __post_init__(self):
         if self.created_at is None:
             self.created_at = datetime.now()

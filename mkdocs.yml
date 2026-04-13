@@ -1,13 +1,13 @@
-site_name: Pixelle-Video
+site_name: XiaoYu.AI
 site_description: AI Video Creator - Generate a short video in 3 minutes
-site_author: Pixelle.AI
-site_url: https://AIDC-AI.github.io/Pixelle-Video/
+site_author: XiaoYu.AI
+site_url: https://AIDC-AI.github.io/XiaoYu.AI/
 
-repo_name: AIDC-AI/Pixelle-Video
-repo_url: https://github.com/AIDC-AI/Pixelle-Video
+repo_name: AIDC-AI/XiaoYu.AI
+repo_url: https://github.com/AIDC-AI/XiaoYu.AI
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; 2025 Pixelle.AI
+copyright: Copyright &copy; 2025 XiaoYu.AI
 
 theme:
   name: material
@@ -164,7 +164,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/AIDC-AI/Pixelle-Video
+      link: https://github.com/AIDC-AI/XiaoYu.AI
       name: GitHub Repository
 
 extra_css:

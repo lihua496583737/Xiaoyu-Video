@@ -1,0 +1,9 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with Wav2Lip lip-sync workflow ID",
+  "metadata": {
+    "type": "lip_sync",
+    "model": "wav2lip",
+    "description": "Wav2Lip lip-sync workflow for animation videos"
+  }
+}

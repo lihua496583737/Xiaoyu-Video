@@ -331,24 +331,64 @@ class HTMLFrameGenerator:
         """
         Find suitable Chrome/Chromium executable, preferring non-snap versions
         
+        Supports:
+        - Google Chrome (Stable)
+        - Google Chrome Canary
+        - Chromium
+        - Microsoft Edge
+
         Returns:
             Path to Chrome executable or None to use default
         """
-        if os.name != 'posix':
-            return None
-        
         import subprocess
         
+        # === Windows 系统 ===
+        if os.name == 'nt':
+            # Windows Chrome 候选路径（包括 Canary）
+            windows_candidates = [
+                # Chrome Canary (开发者版本)
+                os.path.expandvars(r'%LOCALAPPDATA%\Google\Chrome SxS\Application\chrome.exe'),
+                # Chrome Stable
+                r'C:\Program Files\Google\Chrome\Application\chrome.exe',
+                r'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe',
+                os.path.expandvars(r'%LOCALAPPDATA%\Google\Chrome\Application\chrome.exe'),
+                # Microsoft Edge (基于 Chromium)
+                r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
+                r'C:\Program Files\Microsoft\Edge\Application\msedge.exe',
+                # Chromium
+                r'C:\Program Files\Chromium\Application\chrome.exe',
+            ]
+            
+            for path in windows_candidates:
+                if os.path.exists(path):
+                    logger.info(f"✓ Found browser: {path}")
+                    return path
+            
+            logger.warning(
+                "⚠️  No Chrome/Chromium/Edge found on Windows.\n"
+                "   Please install Google Chrome, Chrome Canary, or Microsoft Edge.\n"
+                "   Chrome Canary: https://www.google.com/chrome/canary/\n"
+                "   Chrome Stable: https://www.google.com/chrome/"
+            )
+            return None
+
+        # === Linux 系统 ===
+        if os.name != 'posix':
+            return None
+
         # Preferred browsers (non-snap versions)
         candidates = [
             '/usr/bin/google-chrome',
             '/usr/bin/google-chrome-stable',
+            '/usr/bin/google-chrome-canary',
             '/usr/bin/chromium',
             '/usr/bin/chromium-browser',
             '/usr/local/bin/chrome',
             '/usr/local/bin/chromium',
+            '/opt/google/chrome/chrome',
+            '/opt/google/chrome-canary/chrome',
         ]
-        
+
         # Check each candidate
         for path in candidates:
             if os.path.exists(path) and os.access(path, os.X_OK):
@@ -361,7 +401,7 @@ class HTMLFrameGenerator:
                         timeout=1
                     )
                     real_path = result.stdout.strip()
-                    
+
                     if '/snap/' not in real_path:
                         logger.info(f"✓ Found non-snap browser: {path} -> {real_path}")
                         return path
@@ -369,7 +409,7 @@ class HTMLFrameGenerator:
                         logger.debug(f"✗ Skipping snap browser: {path}")
                 except Exception as e:
                     logger.debug(f"Error checking {path}: {e}")
-        
+
         # Warn if no suitable browser found
         logger.warning(
             "⚠️  No non-snap Chrome/Chromium found. Snap browsers have AppArmor restrictions.\n"

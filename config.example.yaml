@@ -1,8 +1,8 @@
-# Pixelle-Video Configuration
+# XiaoYu.AI Configuration
 # Copy this file to config.yaml and fill in your settings
 # ⚠️ Never commit config.yaml to Git!
 
-project_name: Pixelle-Video
+project_name: XiaoYu.AI
 
 # ==================== LLM Configuration ====================
 # Supports any OpenAI SDK compatible API

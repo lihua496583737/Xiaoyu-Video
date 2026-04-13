@@ -1,0 +1,10 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with frame interpolation workflow ID",
+  "metadata": {
+    "type": "interpolation",
+    "model": "rife",
+    "target_fps": 48,
+    "description": "Frame interpolation workflow (24fps -> 48fps)"
+  }
+}

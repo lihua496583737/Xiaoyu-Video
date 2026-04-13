@@ -1,12 +1,12 @@
-# Pixelle-Video 🎬
+# XiaoYu.AI 🎬
 
 <div align="center" markdown="1">
 
 **AI Video Creator - Generate a short video in 3 minutes**
 
-[![Stars](https://img.shields.io/github/stars/AIDC-AI/Pixelle-Video.svg?style=flat-square)](https://github.com/AIDC-AI/Pixelle-Video/stargazers)
-[![Issues](https://img.shields.io/github/issues/AIDC-AI/Pixelle-Video.svg?style=flat-square)](https://github.com/AIDC-AI/Pixelle-Video/issues)
-[![License](https://img.shields.io/github/license/AIDC-AI/Pixelle-Video.svg?style=flat-square)](https://github.com/AIDC-AI/Pixelle-Video/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/AIDC-AI/XiaoYu.AI.svg?style=flat-square)](https://github.com/AIDC-AI/XiaoYu.AI/stargazers)
+[![Issues](https://img.shields.io/github/issues/AIDC-AI/XiaoYu.AI.svg?style=flat-square)](https://github.com/AIDC-AI/XiaoYu.AI/issues)
+[![License](https://img.shields.io/github/license/AIDC-AI/XiaoYu.AI.svg?style=flat-square)](https://github.com/AIDC-AI/XiaoYu.AI/blob/main/LICENSE)
 
 </div>
 
@@ -14,7 +14,7 @@
 
 ## 🎯 Overview
 
-Simply input a **topic**, and Pixelle-Video will automatically:
+Simply input a **topic**, and XiaoYu.AI will automatically:
 
 - ✍️ Write video scripts
 - 🎨 Generate AI images  
@@ -51,8 +51,8 @@ Simply input a **topic**, and Pixelle-Video will automatically:
 
 Ready to get started? Just three steps:
 
-1. **[Install Pixelle-Video](getting-started/installation.md)** - Download and install the project
-   - 🪟 **Windows Users (Recommended)**: Use the [All-in-One Package](https://github.com/AIDC-AI/Pixelle-Video/releases/latest), no Python installation required
+1. **[Install XiaoYu.AI](getting-started/installation.md)** - Download and install the project
+   - 🪟 **Windows Users (Recommended)**: Use the [All-in-One Package](https://github.com/AIDC-AI/XiaoYu.AI/releases/latest), no Python installation required
    - 💻 **macOS/Linux Users**: Install from source, see [Installation Guide](getting-started/installation.md)
 2. **[Configure Services](getting-started/configuration.md)** - Set up LLM and image generation services
 3. **[Create Your First Video](getting-started/quick-start.md)** - Start creating your first video
@@ -73,7 +73,7 @@ Ready to get started? Just three steps:
 
 ## 🤝 Acknowledgments
 
-Pixelle-Video was inspired by the following excellent open source projects:
+XiaoYu.AI was inspired by the following excellent open source projects:
 
 - [Pixelle-MCP](https://github.com/AIDC-AI/Pixelle-MCP) - ComfyUI MCP server
 - [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) - Excellent video generation tool
@@ -87,13 +87,13 @@ Thanks to these projects for their open source spirit! 🙏
 
 ## 📢 Feedback & Support
 
-- 🐛 **Found a bug**: Submit an [Issue](https://github.com/AIDC-AI/Pixelle-Video/issues)
-- 💡 **Feature request**: Submit a [Feature Request](https://github.com/AIDC-AI/Pixelle-Video/issues)
+- 🐛 **Found a bug**: Submit an [Issue](https://github.com/AIDC-AI/XiaoYu.AI/issues)
+- 💡 **Feature request**: Submit a [Feature Request](https://github.com/AIDC-AI/XiaoYu.AI/issues)
 - ⭐ **Give us a Star**: If this project helps you, please give us a star!
 
 ---
 
 ## 📝 License
 
-This project is licensed under the Apache License 2.0. See the [LICENSE](https://github.com/AIDC-AI/Pixelle-Video/blob/main/LICENSE) file for details.
+This project is licensed under the Apache License 2.0. See the [LICENSE](https://github.com/AIDC-AI/XiaoYu.AI/blob/main/LICENSE) file for details.
 

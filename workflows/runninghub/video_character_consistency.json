@@ -1,0 +1,9 @@
+{
+  "source": "runninghub",
+  "workflow_id": "TODO: Replace with IP-Adapter character consistency workflow ID",
+  "metadata": {
+    "type": "character_consistency",
+    "supports_ipadapter_faceid": true,
+    "description": "IP-Adapter FaceID Plus character consistency workflow"
+  }
+}
